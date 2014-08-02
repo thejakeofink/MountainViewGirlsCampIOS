@@ -7,9 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "Flickr.h"
+#import "FlickrPhoto.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
+@property(nonatomic, weak) IBOutlet UIToolbar *toolbar;
+@property(nonatomic, weak) IBOutlet UIBarButtonItem *shareButton;
+@property(nonatomic, weak) IBOutlet UITextField *textField;
 
+@property(nonatomic, strong) NSMutableDictionary *searchResults;
+@property(nonatomic, strong) NSMutableArray *searches;
+@property(nonatomic, strong) Flickr *flickr;
+
+- (IBAction)shareButtonTapped:(id)sender;
 @end
 
 @implementation ViewController
@@ -17,13 +27,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_cork.png"]];
+    
+    self.searches = [@[] mutableCopy];
+    self.searchResults = [@{} mutableCopy];
+    self.flickr = [[Flickr alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)shareButtonTapped:(id)sender {
+    // TODO
 }
 
 @end

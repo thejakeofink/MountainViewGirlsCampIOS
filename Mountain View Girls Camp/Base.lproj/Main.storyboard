@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cps-KT-jAL">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cps-KT-jAL">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -28,11 +28,11 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ml5-1W-DIZ">
-                                <rect key="frame" x="20" y="73" width="110" height="34"/>
+                                <rect key="frame" x="20" y="39" width="110" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8u-EN-CJD">
-                                <rect key="frame" x="127" y="77" width="162" height="30"/>
+                                <rect key="frame" x="129" y="39" width="162" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -40,17 +40,67 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="IMD-eQ-BnQ"/>
                                 </connections>
                             </textField>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SUT-hH-YdV">
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SUT-hH-YdV">
                                 <rect key="frame" x="0.0" y="115" width="320" height="409"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fON-EH-6PA">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GLF-W4-7Ws">
+                                    <size key="itemSize" width="319" height="298"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCell" id="44A-ld-4qg" customClass="FlickrPhotoCell">
+                                        <rect key="frame" x="1" y="50" width="319" height="298"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="319" height="298"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7y5-7r-CzJ">
+                                                    <rect key="frame" x="60" y="50" width="200" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="pushpin.png" translatesAutoresizingMaskIntoConstraints="NO" id="iub-tJ-9Xn">
+                                                    <rect key="frame" x="125" y="0.0" width="68" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="centerY" secondItem="7y5-7r-CzJ" secondAttribute="centerY" id="WDC-fs-46y"/>
+                                            <constraint firstAttribute="centerX" secondItem="iub-tJ-9Xn" secondAttribute="centerX" id="XOo-s8-HM3"/>
+                                            <constraint firstAttribute="centerX" secondItem="7y5-7r-CzJ" secondAttribute="centerX" id="l2a-BM-LH7"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="7y5-7r-CzJ" id="cWe-dc-c7x"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrPhotoHeaderView" id="7R2-1H-CUU" customClass="FlickrPhotoHeaderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Emy-4z-r4c">
+                                            <rect key="frame" x="20" y="0.0" width="280" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XH-FF-RVX">
+                                            <rect key="frame" x="20" y="0.0" width="280" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <connections>
+                                        <outlet property="backgroundImageView" destination="Emy-4z-r4c" id="2Bo-p2-wCU"/>
+                                        <outlet property="searchLabel" destination="0XH-FF-RVX" id="cco-wg-weI"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="Kl4-9w-ydV"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="tAk-tt-6g6"/>
@@ -58,19 +108,68 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cps-KT-jAL" firstAttribute="top" secondItem="SUT-hH-YdV" secondAttribute="bottom" id="9v7-AA-M0s"/>
+                            <constraint firstAttribute="trailing" secondItem="Cps-KT-jAL" secondAttribute="trailing" id="Ifu-yC-wcs"/>
+                            <constraint firstItem="Cps-KT-jAL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PNQ-Of-Su6"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Cps-KT-jAL" secondAttribute="bottom" id="Qzl-s4-tbv"/>
+                            <constraint firstAttribute="trailing" secondItem="SUT-hH-YdV" secondAttribute="trailing" id="RJF-Uj-BKV"/>
+                            <constraint firstItem="SUT-hH-YdV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Srw-Pl-CV7"/>
+                            <constraint firstItem="Cps-KT-jAL" firstAttribute="top" secondItem="SUT-hH-YdV" secondAttribute="bottom" id="YVu-rx-F7o"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="SUT-hH-YdV" id="4a7-1d-96T"/>
+                        <outlet property="collectionView" destination="SUT-hH-YdV" id="nTE-vW-kbJ"/>
                         <outlet property="shareButton" destination="zJU-YF-wVR" id="LhK-m4-vP3"/>
                         <outlet property="textField" destination="L8u-EN-CJD" id="sgk-pP-cFT"/>
                         <outlet property="toolbar" destination="Cps-KT-jAL" id="bRK-rV-naD"/>
+                        <segue destination="a93-9u-LhE" kind="modal" identifier="ShowFlickrPhoto" id="z0X-2g-3wu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Flickr Photo View Controller-->
+        <scene sceneID="eeh-gD-QSW">
+            <objects>
+                <viewController id="a93-9u-LhE" customClass="FlickrPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bz9-vv-j0F"/>
+                        <viewControllerLayoutGuide type="bottom" id="gcD-DG-7gB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tiw-Q3-oAy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qUe-0F-D70">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Done" id="Hve-xp-p0H">
+                                        <connections>
+                                            <action selector="done:" destination="a93-9u-LhE" id="F7I-Jb-DjS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-LB-Qks">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="TLl-LB-Qks" id="iQP-MM-8jq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CM-8q-ysi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="37"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="pushpin.png" width="22" height="31"/>
         <image name="search_text.png" width="97" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

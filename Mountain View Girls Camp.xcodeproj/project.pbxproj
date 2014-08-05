@@ -43,6 +43,9 @@
 		2C6D5315198BE21C0044705A /* search_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C6D5301198BE21C0044705A /* search_text@2x.png */; };
 		2C6D531A198C641A0044705A /* Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D5317198C641A0044705A /* Flickr.m */; };
 		2C6D531B198C641A0044705A /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D5319198C641A0044705A /* FlickrPhoto.m */; };
+		2C6D531F198FC6050044705A /* FlickrPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D531E198FC6050044705A /* FlickrPhotoCell.m */; };
+		2C6D532219903F060044705A /* FlickrPhotoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D532119903F060044705A /* FlickrPhotoHeaderView.m */; };
+		2C6D5325199084FB0044705A /* FlickrPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D5324199084FB0044705A /* FlickrPhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,12 @@
 		2C6D5317198C641A0044705A /* Flickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Flickr.m; path = ../Flickr.m; sourceTree = "<group>"; };
 		2C6D5318198C641A0044705A /* FlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlickrPhoto.h; path = ../FlickrPhoto.h; sourceTree = "<group>"; };
 		2C6D5319198C641A0044705A /* FlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlickrPhoto.m; path = ../FlickrPhoto.m; sourceTree = "<group>"; };
+		2C6D531D198FC6050044705A /* FlickrPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoCell.h; sourceTree = "<group>"; };
+		2C6D531E198FC6050044705A /* FlickrPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoCell.m; sourceTree = "<group>"; };
+		2C6D532019903F060044705A /* FlickrPhotoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoHeaderView.h; sourceTree = "<group>"; };
+		2C6D532119903F060044705A /* FlickrPhotoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoHeaderView.m; sourceTree = "<group>"; };
+		2C6D5323199084FB0044705A /* FlickrPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoViewController.h; sourceTree = "<group>"; };
+		2C6D5324199084FB0044705A /* FlickrPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +172,14 @@
 				2C6D52C7198BE1D20044705A /* AppDelegate.h */,
 				2C6D52C8198BE1D20044705A /* AppDelegate.m */,
 				2C6D52CA198BE1D20044705A /* Main.storyboard */,
+				2C6D5323199084FB0044705A /* FlickrPhotoViewController.h */,
+				2C6D5324199084FB0044705A /* FlickrPhotoViewController.m */,
+				2C6D532019903F060044705A /* FlickrPhotoHeaderView.h */,
+				2C6D532119903F060044705A /* FlickrPhotoHeaderView.m */,
 				2C6D52CD198BE1D20044705A /* ViewController.h */,
 				2C6D52CE198BE1D20044705A /* ViewController.m */,
+				2C6D531D198FC6050044705A /* FlickrPhotoCell.h */,
+				2C6D531E198FC6050044705A /* FlickrPhotoCell.m */,
 				2C6D52D0198BE1D20044705A /* Images.xcassets */,
 				2C6D52BF198BE1D20044705A /* Supporting Files */,
 			);
@@ -355,7 +370,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6D532219903F060044705A /* FlickrPhotoHeaderView.m in Sources */,
 				2C6D52CF198BE1D20044705A /* ViewController.m in Sources */,
+				2C6D5325199084FB0044705A /* FlickrPhotoViewController.m in Sources */,
+				2C6D531F198FC6050044705A /* FlickrPhotoCell.m in Sources */,
 				2C6D52C9198BE1D20044705A /* AppDelegate.m in Sources */,
 				2C6D531A198C641A0044705A /* Flickr.m in Sources */,
 				2C6D531B198C641A0044705A /* FlickrPhoto.m in Sources */,

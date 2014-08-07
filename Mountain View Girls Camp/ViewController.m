@@ -12,6 +12,7 @@
 #import "FlickrPhotoCell.h"
 #import "FlickrPhotoHeaderView.h"
 #import "FlickrPhotoViewController.h"
+#import "MBProgressHUD.h"
 
 @interface ViewController () <UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property(nonatomic, weak) IBOutlet UIToolbar *toolbar;
@@ -56,6 +57,7 @@
 
 #pragma mark - UITextFieldDelegate methods
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     // 1
     [self.flickr searchFlickrForTerm:textField.text completionBlock:^(NSString *searchTerm, NSArray *results, NSError *error) {
         if(results && [results count] > 0) {
@@ -121,6 +123,8 @@
 
 // 1
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     NSString *searchTerm = self.searches[indexPath.section]; FlickrPhoto *photo =
     self.searchResults[searchTerm][indexPath.row];
     // 2

@@ -10,13 +10,14 @@
 #import "FlickrPhoto.h"
 
 #define kFlickrAPIKey @"f3b34fa4324967a8e889ae3c815c84a9"
+#define user_id @"125836065@N02"
 
 @implementation Flickr
 
 + (NSString *)flickrSearchURLForSearchTerm:(NSString *) searchTerm
 {
     searchTerm = [searchTerm stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&text=%@&per_page=20&format=json&nojsoncallback=1",kFlickrAPIKey,searchTerm];
+    return [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=%@&photoset_id=%@&per_page=20&format=json&nojsoncallback=1",kFlickrAPIKey, user_id];
 }
 
 + (NSString *)flickrPhotoURLForFlickrPhoto:(FlickrPhoto *) flickrPhoto size:(NSString *) size
@@ -28,8 +29,56 @@
     return [NSString stringWithFormat:@"http://farm%d.staticflickr.com/%d/%lld_%@_%@.jpg",flickrPhoto.farm,flickrPhoto.server,flickrPhoto.photoID,flickrPhoto.secret,size];
 }
 
++ (NSString *)flickrListURLForAccount
+{
+    return [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photosets.getList&api_key=%@&user_id=%@&format=json&jsoncallback=?", kFlickrAPIKey, user_id];
+}
+
 - (void)searchFlickrForTerm:(NSString *) term completionBlock:(FlickrSearchCompletionBlock) completionBlock
 {
+    NSString *listURL = [Flickr flickrListURLForAccount];
+    dispatch_queue_t firstQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(firstQueue, ^{
+        NSError *listError = nil;
+        NSString *listResultString = [NSString stringWithContentsOfURL:[NSURL URLWithString:listURL] encoding:NSUTF8StringEncoding error:(&listError)];
+        
+        if (listError != nil) {
+            completionBlock(term,nil, listError);
+        }
+        else
+        {
+            NSLog([NSString stringWithFormat:@"%@",listResultString]);
+            // Parse JSON Response
+            NSData *listJson = [listResultString dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *listResultsDict = [NSJSONSerialization JSONObjectWithData:listJson options:kNilOptions error:&listError];
+            
+            NSLog(@"What the hell?");
+            
+            NSLog(listResultsDict[@"photosets"]);
+
+            if (listError != nil)
+            {
+                completionBlock(term,nil,listError);
+            }
+            else
+            {
+                NSString * status = listResultsDict[@"stat"];
+                if ([status isEqualToString:@"fail"]) {
+                    NSError * error = [[NSError alloc] initWithDomain:@"FlickrList" code:0 userInfo:@{NSLocalizedFailureReasonErrorKey: listResultsDict[@"message"]}];
+                    completionBlock(term,nil,error);
+                } else {
+                    NSArray *objSets = listResultsDict[@"photos"][@"photo"];
+                    NSMutableArray *flickrList = [@[] mutableCopy];
+                    for(NSMutableDictionary *objSet in objSets)
+                    {
+                        
+                    }
+                }
+            }
+        }
+    });
+    
     NSString *searchURL = [Flickr flickrSearchURLForSearchTerm:term];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     

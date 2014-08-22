@@ -83,13 +83,13 @@
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     // 1
-    [self.flickr searchFlickrForTerm:textField.text completionBlock:^(NSString *searchTerm, NSArray *results, NSError *error) {
+    [self.flickr searchFlickrForSets: (FlickrListCompletionBlock)^(NSString *photosetID, NSArray *results, NSError *error) {
         if(results && [results count] > 0) {
             // 2
-            if(![self.searches containsObject:searchTerm]) {
-                NSLog(@"Found %d photos matching %@", [results count],searchTerm);
-                [self.searches insertObject:searchTerm atIndex:0];
-                self.searchResults[searchTerm] = results; }
+            if(![self.searches containsObject:photosetID]) {
+                NSLog(@"Found %d photos matching %@", [results count],photosetID);
+                [self.searches insertObject:photosetID atIndex:0];
+                self.searchResults[photosetID] = results; }
             // 3
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.collectionView reloadData];
@@ -98,6 +98,7 @@
             NSLog(@"What is our error? %@", error.userInfo);
             NSLog(@"Error searching Flickr: %@", error.localizedDescription);
         } }];
+    
     [textField resignFirstResponder];
     return YES; 
 }

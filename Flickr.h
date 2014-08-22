@@ -10,15 +10,17 @@
 
 @class FlickrPhoto;
 
-typedef void (^FlickrSearchCompletionBlock)(NSString *searchTerm, NSArray *results, NSError *error);
+typedef void (^FlickrListCompletionBlock)(NSString *setID, NSArray *results, NSError *error);
 typedef void (^FlickrPhotoCompletionBlock)(UIImage *photoImage, NSError *error);
 
 @interface Flickr : NSObject
 
 @property(strong) NSString *apiKey;
 
-- (void)searchFlickrForTerm:(NSString *) term completionBlock:(FlickrSearchCompletionBlock) completionBlock;
+- (void)searchFlickrForSets: (FlickrListCompletionBlock) completionBlock;
 + (void)loadImageForPhoto:(FlickrPhoto *)flickrPhoto thumbnail:(BOOL)thumbnail completionBlock:(FlickrPhotoCompletionBlock) completionBlock;
++ (NSString *)flickrURLForPhotoSet:(NSString *) photosetID;
+- (void)retrievePhotosForSet:(NSString *) photosetID completionBlock: (FlickrListCompletionBlock) completionBlock;
 + (NSString *)flickrListURLForAccount;
 + (NSString *)flickrPhotoURLForFlickrPhoto:(FlickrPhoto *) flickrPhoto size:(NSString *) size;
 

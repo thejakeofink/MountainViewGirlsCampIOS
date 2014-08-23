@@ -96,6 +96,7 @@
             
             NSData *jsonData = [searchResultString dataUsingEncoding:NSUTF8StringEncoding];
             NSDictionary *searchResultsDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+            
             if(error != nil)
             {
             }
@@ -109,7 +110,7 @@
                 }
                 else
                 {
-                    NSArray *objPhotos = searchResultsDict[@"photos"][@"photo"];
+                    NSArray *objPhotos = searchResultsDict[@"photoset"][@"photo"];
                     NSMutableArray *flickrPhotos = [@[] mutableCopy];
                     
                     for(NSMutableDictionary *objPhoto in objPhotos)

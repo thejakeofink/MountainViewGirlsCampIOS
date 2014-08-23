@@ -56,6 +56,8 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
+    
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     // 1
     if(self.flickrPhoto.largeImage) {
         self.imageView.image = self.flickrPhoto.largeImage;

@@ -7,6 +7,8 @@
 //
 
 @class FlickrPhoto;
-@interface FlickrPhotoViewController : UIViewController @property(nonatomic, strong)
-FlickrPhoto *flickrPhoto;
+
+@interface FlickrPhotoViewController : UIViewController
+@property(nonatomic, strong) FlickrPhoto *flickrPhoto;
+
 @end

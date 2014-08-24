@@ -62,14 +62,15 @@
                     NSError * error = [[NSError alloc] initWithDomain:@"FlickrList" code:0 userInfo:@{NSLocalizedFailureReasonErrorKey: listResultsDict[@"message"]}];
                     completionBlock(nil, nil, error);
                 } else {
-                    NSDictionary *photosets = [listResultsDict valueForKey:@"photosets"];
+                    NSDictionary *placeholder = [listResultsDict valueForKey:@"photosets"];
                     
-                    NSArray *placeholder = [photosets valueForKey:@"photoset"];
+                    NSArray *photosets = [placeholder valueForKey:@"photoset"];
                     
-                    for (NSDictionary *photoset in placeholder) {
+                    for (NSDictionary *photoset in photosets) {
                         NSString *psID = [photoset valueForKey:@"id"];
                         [self retrievePhotosForSet:psID completionBlock:completionBlock];
                     }
+                    completionBlock(nil, photosets, listError);
                 }
             }
         }

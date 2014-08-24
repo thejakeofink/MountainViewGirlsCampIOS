@@ -70,7 +70,7 @@
                         NSString *psID = [photoset valueForKey:@"id"];
                         [self retrievePhotosForSet:psID completionBlock:completionBlock];
                     }
-                    completionBlock(nil, photosets, listError);
+//                    completionBlock(nil, photosets, listError);
                 }
             }
         }

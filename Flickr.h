@@ -1,9 +1,9 @@
 //
 //  Flickr.h
-//  Flickr Search
+//  Mountain View Girls Camp
 //
-//  Created by Brandon Trebitowski on 6/28/12.
-//  Copyright (c) 2012 Brandon Trebitowski. All rights reserved.
+//  Created by Jake Stokes on 8/1/2014.
+//  Copyright (c) 2014 Jake Stokes. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

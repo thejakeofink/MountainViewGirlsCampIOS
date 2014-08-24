@@ -3,7 +3,7 @@
 //  Mountain View Girls Camp
 //
 //  Created by Jake Stokes on 8/1/14.
-//  Copyright (c) 2014 ___FULLUSERNAME___. All rights reserved.
+//  Copyright (c) 2014 Jake Stokes. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -17,7 +17,6 @@
 
 @interface ViewController ()<UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate>@property(nonatomic, weak) IBOutlet UIToolbar *toolbar;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem *shareButton;
-@property(nonatomic, weak) IBOutlet UITextField *textField;
 
 @property(nonatomic, strong) NSMutableDictionary *searchResults;
 @property(nonatomic, strong) NSMutableArray *searches;
@@ -44,6 +43,8 @@
     self.flickr = [[Flickr alloc] init];
     
     self.selectedPhotos = [@[] mutableCopy];
+    
+    [self loadPhotos];
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"FlickrCell"];
 }
 
@@ -79,8 +80,7 @@
     }
 }
 
-#pragma mark - UITextFieldDelegate methods
-- (BOOL) textFieldShouldReturn:(UITextField *)textField {
+-(void)loadPhotos; {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     // 1
     [self.flickr searchFlickrForSets: (FlickrListCompletionBlock)^(NSString *photosetID, NSArray *results, NSError *error) {
@@ -98,9 +98,6 @@
             NSLog(@"What is our error? %@", error.userInfo);
             NSLog(@"Error searching Flickr: %@", error.localizedDescription);
         } }];
-    
-    [textField resignFirstResponder];
-    return YES; 
 }
 
 #pragma mark - UICollectionView Datasource

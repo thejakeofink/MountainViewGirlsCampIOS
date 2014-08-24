@@ -3,7 +3,7 @@
 //  Mountain View Girls Camp
 //
 //  Created by Jake Stokes on 8/1/14.
-//  Copyright (c) 2014 ___FULLUSERNAME___. All rights reserved.
+//  Copyright (c) 2014 Jake Stokes. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

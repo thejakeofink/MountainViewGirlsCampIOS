@@ -1,9 +1,9 @@
 //
 //  Flickr.m
-//  Flickr Search
+//  Mountain View Girls Camp
 //
-//  Created by Brandon Trebitowski on 6/28/12.
-//  Copyright (c) 2012 Brandon Trebitowski. All rights reserved.
+//  Created by Jake Stokes on 8/1/2014.
+//  Copyright (c) 2014 Jake Stokes. All rights reserved.
 //
 
 #import "Flickr.h"
@@ -16,7 +16,7 @@
 
 + (NSString *)flickrURLForPhotoSet:(NSString *) photosetID
 {
-    return [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=%@&photoset_id=%@&per_page=20&format=json&nojsoncallback=1",kFlickrAPIKey, photosetID];
+    return [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=%@&photoset_id=%@&format=json&nojsoncallback=1",kFlickrAPIKey, photosetID];
 }
 
 + (NSString *)flickrPhotoURLForFlickrPhoto:(FlickrPhoto *) flickrPhoto size:(NSString *) size
@@ -107,10 +107,12 @@
                 if ([status isEqualToString:@"fail"])
                 {
                     NSError * error = [[NSError alloc] initWithDomain:@"FlickrSearch" code:0 userInfo:@{NSLocalizedFailureReasonErrorKey: searchResultsDict[@"message"]}];
+                    completionBlock(nil, nil, error);
                 }
                 else
                 {
                     NSArray *objPhotos = searchResultsDict[@"photoset"][@"photo"];
+                    NSString *albumName = searchResultsDict[@"photoset"][@"title"];
                     NSMutableArray *flickrPhotos = [@[] mutableCopy];
                     
                     for(NSMutableDictionary *objPhoto in objPhotos)
@@ -133,7 +135,7 @@
                         
                         [flickrPhotos addObject:photo];
                     }
-                    completionBlock(photosetID, flickrPhotos, nil);
+                    completionBlock(albumName, flickrPhotos, nil);
                 }
             }
         }

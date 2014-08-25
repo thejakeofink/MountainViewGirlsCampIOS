@@ -11,5 +11,5 @@
 @interface ViewController : UIViewController
 @property (nonatomic, strong) NSString *photosetID;
 
--(void)loadPhotos;
+-(void)loadPhotosForPhotoSet: (NSString *)albumID;
 @end

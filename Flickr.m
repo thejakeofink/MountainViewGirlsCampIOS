@@ -66,11 +66,11 @@
                     
                     NSArray *photosets = [placeholder valueForKey:@"photoset"];
                     
-                    for (NSDictionary *photoset in photosets) {
-                        NSString *psID = [photoset valueForKey:@"id"];
-                        [self retrievePhotosForSet:psID completionBlock:completionBlock];
-                    }
-//                    completionBlock(nil, photosets, listError);
+//                    for (NSDictionary *photoset in photosets) {
+//                        NSString *psID = [photoset valueForKey:@"id"];
+//                        [self retrievePhotosForSet:psID completionBlock:completionBlock];
+//                    }
+                    completionBlock(nil, photosets, listError);
                 }
             }
         }

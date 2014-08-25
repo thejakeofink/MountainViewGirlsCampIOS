@@ -15,7 +15,8 @@
 #import "MBProgressHUD.h"
 #import <MessageUI/MessageUI.h>
 
-@interface ViewController ()<UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate>@property(nonatomic, weak) IBOutlet UIToolbar *toolbar;
+@interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate>
+@property(nonatomic, weak) IBOutlet UIToolbar *toolbar;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem *shareButton;
 
 @property(nonatomic, strong) NSMutableDictionary *searchResults;
@@ -44,7 +45,7 @@
     
     self.selectedPhotos = [@[] mutableCopy];
     
-    [self loadPhotos];
+    [self loadPhotosForPhotoSet: _photosetID];
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"FlickrCell"];
 }
 
@@ -80,10 +81,10 @@
     }
 }
 
--(void)loadPhotos; {
+-(void)loadPhotosForPhotoSet: (NSString *)albumID {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     // 1
-    [self.flickr searchFlickrForSets: (FlickrListCompletionBlock)^(NSString *photosetID, NSArray *results, NSError *error) {
+    [self.flickr retrievePhotosForSet: albumID completionBlock: (FlickrListCompletionBlock)^(NSString *photosetID, NSArray *results, NSError *error) {
         if(results && [results count] > 0) {
             // 2
             if(![self.searches containsObject:photosetID]) {
@@ -93,11 +94,14 @@
             // 3
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.collectionView reloadData];
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
             });
         } else { // 1
             NSLog(@"What is our error? %@", error.userInfo);
             NSLog(@"Error searching Flickr: %@", error.localizedDescription);
-        } }];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }
+    }];
 }
 
 #pragma mark - UICollectionView Datasource
@@ -121,7 +125,8 @@
 - (UICollectionReusableView *)collectionView: (UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     FlickrPhotoHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:
                                          UICollectionElementKindSectionHeader withReuseIdentifier:@"FlickrPhotoHeaderView" forIndexPath:indexPath];
-    NSString *searchTerm = self.searches[indexPath.section]; [headerView setSearchText:searchTerm];
+    NSString *searchTerm = self.searches[indexPath.section];
+    [headerView setSearchText:searchTerm];
     return headerView;
 }
 
@@ -152,9 +157,8 @@
 // 1
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    NSString *searchTerm = self.searches[indexPath.section]; FlickrPhoto *photo =
-    self.searchResults[searchTerm][indexPath.row];
+    NSString *searchTerm = self.searches[indexPath.section];
+    FlickrPhoto *photo = self.searchResults[searchTerm][indexPath.row];
     // 2
     CGSize retval = photo.thumbnail.size.width > 0 ? photo.thumbnail.size : CGSizeMake(100, 100);
     retval.height += 35; retval.width += 35;

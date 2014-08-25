@@ -10,4 +10,6 @@
 
 @interface AlbumSelectViewController : UIViewController
 
+-(void)loadAlbums;
+
 @end

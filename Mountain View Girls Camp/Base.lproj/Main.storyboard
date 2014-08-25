@@ -105,7 +105,6 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="customSize" width="250" height="100"/>
                                         <connections>
                                             <outlet property="albumName" destination="UgH-BG-xRU" id="jkU-8d-ufA"/>
@@ -123,11 +122,12 @@
                     <navigationItem key="navigationItem" id="fgn-DO-m1Y"/>
                     <connections>
                         <outlet property="collectionView" destination="lKU-TR-8re" id="g6C-x8-gU5"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="ShowFlickrAlbum" id="9Ma-bC-c26"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoJ-gY-8fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="-563"/>
+            <point key="canvasLocation" x="449" y="37"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -235,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273" y="37"/>
+            <point key="canvasLocation" x="929" y="37"/>
         </scene>
         <!--Flickr Photo View Controller-->
         <scene sceneID="eeh-gD-QSW">
@@ -273,7 +273,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1CM-8q-ysi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="677" y="37"/>
+            <point key="canvasLocation" x="1333" y="37"/>
         </scene>
     </scenes>
     <resources>

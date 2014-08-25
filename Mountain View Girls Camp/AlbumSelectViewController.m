@@ -9,6 +9,7 @@
 #import "AlbumSelectViewController.h"
 #import "Flickr.h"
 #import "FlickrAlbumCell.h"
+#import "ViewController.h"
 #import "MBProgressHUD.h"
 
 @interface AlbumSelectViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
@@ -77,6 +78,15 @@
     return cell;
 }
 
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *album = self.albums[indexPath.row];
+    NSString *albumID = album[@"id"];
+    [self performSegueWithIdentifier:@"ShowFlickrAlbum" sender:albumID];
+    [self.collectionView deselectItemAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark – UICollectionViewDelegateFlowLayout
 // 1
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -89,6 +99,14 @@
 // 3
 - (UIEdgeInsets)collectionView: (UICollectionView *) collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(50, 20, 50, 20);
+}
+
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ShowFlickrAlbum"]) {
+        ViewController *ViewController = segue.destinationViewController;
+        ViewController.photosetID = sender;
+    }
 }
 
 

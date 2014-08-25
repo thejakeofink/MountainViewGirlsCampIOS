@@ -17,7 +17,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         UIView *bgView = [[UIView alloc] initWithFrame:self.backgroundView.frame];
-        bgView.backgroundColor = [UIColor darkGrayColor];
+        bgView.backgroundColor = [UIColor lightGrayColor];
         bgView.layer.borderColor = [[UIColor whiteColor] CGColor];
         bgView.layer.borderWidth = 4;
         self.selectedBackgroundView = bgView;

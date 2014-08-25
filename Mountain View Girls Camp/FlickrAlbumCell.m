@@ -10,19 +10,23 @@
 
 @implementation FlickrAlbumCell
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Initialization code
+        UIView *bgView = [[UIView alloc] initWithFrame:self.backgroundView.frame];
+        bgView.backgroundColor = [UIColor lightGrayColor];
+        bgView.layer.borderColor = [[UIColor whiteColor] CGColor];
+        bgView.layer.borderWidth = 4;
+        self.selectedBackgroundView = bgView;
     }
     return self;
 }
 
 -(void) setName:(NSString *)name {
     
-    if (![[_albumName currentTitle] isEqualToString: name]) {
-        [_albumName setTitle:name forState:UIControlStateNormal];
+    if (![_albumName.text isEqualToString: name]) {
+        _albumName.text = name;
     }
 }
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FlickrAlbumCell : UICollectionViewCell
-@property (nonatomic, strong) IBOutlet UIButton *albumName;
+@property (nonatomic, strong) IBOutlet UILabel *albumName;
 
 -(void) setName:(NSString *)name;
 @end

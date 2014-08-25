@@ -95,19 +95,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgH-BG-xRU">
-                                                    <rect key="frame" x="12" y="35" width="227" height="30"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AlbumName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP0-I4-lI0">
+                                                    <rect key="frame" x="25" y="10" width="200" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="AlbumName">
-                                                        <color key="titleColor" red="0.30103597789999997" green="0.2358456287" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                </button>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.30103597789999997" green="0.2358456287" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tP0-I4-lI0" secondAttribute="trailing" id="ADQ-Vb-Jet"/>
+                                            <constraint firstItem="tP0-I4-lI0" firstAttribute="leading" secondItem="B24-4e-YYi" secondAttribute="leading" id="Sbg-hi-ySh"/>
+                                            <constraint firstAttribute="bottom" secondItem="tP0-I4-lI0" secondAttribute="bottom" id="Vgc-Ur-YUy"/>
+                                            <constraint firstItem="tP0-I4-lI0" firstAttribute="top" secondItem="B24-4e-YYi" secondAttribute="top" id="lKp-Ef-P9T"/>
+                                        </constraints>
                                         <size key="customSize" width="250" height="100"/>
                                         <connections>
-                                            <outlet property="albumName" destination="UgH-BG-xRU" id="jkU-8d-ufA"/>
+                                            <outlet property="albumName" destination="tP0-I4-lI0" id="FMu-Cu-7w6"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

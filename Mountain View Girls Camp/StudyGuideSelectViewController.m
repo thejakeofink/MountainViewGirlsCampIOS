@@ -40,19 +40,27 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"PersonalRevelation"]) {
         StudyGuideViewController *ViewController = segue.destinationViewController;
-        ViewController.studyGuideLocation = @"Location for PR";
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"PersonalRevelationTempleStudyGuide" ofType:@"htm" inDirectory:@"www"];
+        
+        ViewController.studyGuideLocation = path;
     }
     else if ([segue.identifier isEqualToString:@"Temptation"]) {
         StudyGuideViewController *ViewController = segue.destinationViewController;
-        ViewController.studyGuideLocation = @"Location for Temptation";
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"TemptationStudyGuide" ofType:@"htm" inDirectory:@"www"];
+        
+        ViewController.studyGuideLocation = path;
     }
     else if ([segue.identifier isEqualToString:@"FaithFriendships"]) {
         StudyGuideViewController *ViewController = segue.destinationViewController;
-        ViewController.studyGuideLocation = @"Location for FF";
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"FaithFriendshipsStudyGuide" ofType:@"htm" inDirectory:@"www"];
+        
+        ViewController.studyGuideLocation = path;
     }
     else if ([segue.identifier isEqualToString:@"YWTheme"]) {
         StudyGuideViewController *ViewController = segue.destinationViewController;
-        ViewController.studyGuideLocation = @"Location for YW Theme";
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"YoungWomenThemeStudyGuide" ofType:@"htm" inDirectory:@"www"];
+        
+        ViewController.studyGuideLocation = path;
     }
 }
 

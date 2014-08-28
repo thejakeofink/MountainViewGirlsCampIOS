@@ -12,6 +12,7 @@
 		2C0C773E19AAA5550016A1C5 /* FlickrAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C773D19AAA5550016A1C5 /* FlickrAlbumCell.m */; };
 		2C65933E19AED13500C303B5 /* StudyGuideSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65933D19AED13500C303B5 /* StudyGuideSelectViewController.m */; };
 		2C65934119AF870C00C303B5 /* StudyGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65934019AF870C00C303B5 /* StudyGuideViewController.m */; };
+		2C65934319AF960100C303B5 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 2C65934219AF960100C303B5 /* www */; };
 		2C6D52B9198BE1D20044705A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D52B8198BE1D20044705A /* Foundation.framework */; };
 		2C6D52BB198BE1D20044705A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D52BA198BE1D20044705A /* CoreGraphics.framework */; };
 		2C6D52BD198BE1D20044705A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D52BC198BE1D20044705A /* UIKit.framework */; };
@@ -76,6 +77,7 @@
 		2C65933D19AED13500C303B5 /* StudyGuideSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyGuideSelectViewController.m; sourceTree = "<group>"; };
 		2C65933F19AF870C00C303B5 /* StudyGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyGuideViewController.h; sourceTree = "<group>"; };
 		2C65934019AF870C00C303B5 /* StudyGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyGuideViewController.m; sourceTree = "<group>"; };
+		2C65934219AF960100C303B5 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		2C6D52B5198BE1D10044705A /* Mountain View Girls Camp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mountain View Girls Camp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6D52B8198BE1D20044705A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C6D52BA198BE1D20044705A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,6 +160,7 @@
 		2C6D52AC198BE1D10044705A = {
 			isa = PBXGroup;
 			children = (
+				2C65934219AF960100C303B5 /* www */,
 				2C6D52BE198BE1D20044705A /* Mountain View Girls Camp */,
 				2C6D52DD198BE1D20044705A /* Mountain View Girls CampTests */,
 				2C6D52B7198BE1D10044705A /* Frameworks */,
@@ -371,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C65934319AF960100C303B5 /* www in Resources */,
 				2C6D52D1198BE1D20044705A /* Images.xcassets in Resources */,
 				2C6D5304198BE21C0044705A /* button.png in Resources */,
 				2C6D5307198BE21C0044705A /* decoration_snail@2x.png in Resources */,

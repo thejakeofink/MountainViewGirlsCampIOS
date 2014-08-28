@@ -9,6 +9,9 @@
 #import "StudyGuideViewController.h"
 
 @interface StudyGuideViewController ()
+@property (weak) IBOutlet UIWebView *webView;
+
+-(IBAction)done:(id) sender;
 
 @end
 
@@ -26,13 +29,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSURL *url = [NSURL fileURLWithPath:self.studyGuideLocation];
+    
+    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)done:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{}];
 }
 
 /*

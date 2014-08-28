@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="449" y="-782"/>
         </scene>
-        <!--View Controller-->
+        <!--Study Guide View Controller-->
         <scene sceneID="VrB-c3-hpF">
             <objects>
-                <viewController id="GsR-Xy-Pdf" sceneMemberID="viewController">
+                <viewController id="GsR-Xy-Pdf" customClass="StudyGuideViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HVd-aB-mI3"/>
                         <viewControllerLayoutGuide type="bottom" id="Snn-sZ-WMg"/>
@@ -155,11 +155,15 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Done" id="uCK-Zg-0pD"/>
+                                    <barButtonItem title="Done" id="uCK-Zg-0pD">
+                                        <connections>
+                                            <action selector="done:" destination="GsR-Xy-Pdf" id="iDN-BK-NYZ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHc-Pw-N8d">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHc-Pw-N8d">
+                                <rect key="frame" x="0.0" y="77" width="320" height="447"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -167,9 +171,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Snn-sZ-WMg" firstAttribute="top" secondItem="YSr-ac-u1A" secondAttribute="bottom" id="HaZ-If-NJr"/>
+                            <constraint firstItem="gHc-Pw-N8d" firstAttribute="top" secondItem="HVd-aB-mI3" secondAttribute="bottom" constant="24" id="TTO-7A-b7P"/>
                             <constraint firstItem="YSr-ac-u1A" firstAttribute="top" secondItem="gHc-Pw-N8d" secondAttribute="bottom" id="Xw8-Ak-iVR"/>
+                            <constraint firstAttribute="trailing" secondItem="gHc-Pw-N8d" secondAttribute="trailing" id="hEr-Dr-AsN"/>
+                            <constraint firstItem="gHc-Pw-N8d" firstAttribute="leading" secondItem="K7M-L4-SaY" secondAttribute="leading" id="qcT-zp-Nqg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="gHc-Pw-N8d" id="6fu-W8-Cae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5L-WP-OLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

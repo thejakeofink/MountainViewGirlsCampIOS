@@ -10,6 +10,8 @@
 		2C0C773819A9731D0016A1C5 /* InitialPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C773719A9731D0016A1C5 /* InitialPageViewController.m */; };
 		2C0C773B19A97D000016A1C5 /* AlbumSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C773A19A97D000016A1C5 /* AlbumSelectViewController.m */; };
 		2C0C773E19AAA5550016A1C5 /* FlickrAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C773D19AAA5550016A1C5 /* FlickrAlbumCell.m */; };
+		2C65933E19AED13500C303B5 /* StudyGuideSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65933D19AED13500C303B5 /* StudyGuideSelectViewController.m */; };
+		2C65934119AF870C00C303B5 /* StudyGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65934019AF870C00C303B5 /* StudyGuideViewController.m */; };
 		2C6D52B9198BE1D20044705A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D52B8198BE1D20044705A /* Foundation.framework */; };
 		2C6D52BB198BE1D20044705A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D52BA198BE1D20044705A /* CoreGraphics.framework */; };
 		2C6D52BD198BE1D20044705A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6D52BC198BE1D20044705A /* UIKit.framework */; };
@@ -70,6 +72,10 @@
 		2C0C773A19A97D000016A1C5 /* AlbumSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumSelectViewController.m; sourceTree = "<group>"; };
 		2C0C773C19AAA5550016A1C5 /* FlickrAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAlbumCell.h; sourceTree = "<group>"; };
 		2C0C773D19AAA5550016A1C5 /* FlickrAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrAlbumCell.m; sourceTree = "<group>"; };
+		2C65933C19AED13500C303B5 /* StudyGuideSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyGuideSelectViewController.h; sourceTree = "<group>"; };
+		2C65933D19AED13500C303B5 /* StudyGuideSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyGuideSelectViewController.m; sourceTree = "<group>"; };
+		2C65933F19AF870C00C303B5 /* StudyGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyGuideViewController.h; sourceTree = "<group>"; };
+		2C65934019AF870C00C303B5 /* StudyGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyGuideViewController.m; sourceTree = "<group>"; };
 		2C6D52B5198BE1D10044705A /* Mountain View Girls Camp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mountain View Girls Camp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6D52B8198BE1D20044705A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C6D52BA198BE1D20044705A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -193,6 +199,10 @@
 				2C6D532119903F060044705A /* FlickrPhotoHeaderView.m */,
 				2C0C773619A9731D0016A1C5 /* InitialPageViewController.h */,
 				2C0C773719A9731D0016A1C5 /* InitialPageViewController.m */,
+				2C65933C19AED13500C303B5 /* StudyGuideSelectViewController.h */,
+				2C65933D19AED13500C303B5 /* StudyGuideSelectViewController.m */,
+				2C65933F19AF870C00C303B5 /* StudyGuideViewController.h */,
+				2C65934019AF870C00C303B5 /* StudyGuideViewController.m */,
 				2C0C773919A97D000016A1C5 /* AlbumSelectViewController.h */,
 				2C0C773A19A97D000016A1C5 /* AlbumSelectViewController.m */,
 				2C6D52CD198BE1D20044705A /* ViewController.h */,
@@ -403,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C0C773E19AAA5550016A1C5 /* FlickrAlbumCell.m in Sources */,
+				2C65934119AF870C00C303B5 /* StudyGuideViewController.m in Sources */,
 				2C6D532219903F060044705A /* FlickrPhotoHeaderView.m in Sources */,
 				2C6D52CF198BE1D20044705A /* ViewController.m in Sources */,
 				2C6D5325199084FB0044705A /* FlickrPhotoViewController.m in Sources */,
@@ -414,6 +425,7 @@
 				2C0C773B19A97D000016A1C5 /* AlbumSelectViewController.m in Sources */,
 				2C6D531B198C641A0044705A /* FlickrPhoto.m in Sources */,
 				2C6D52C5198BE1D20044705A /* main.m in Sources */,
+				2C65933E19AED13500C303B5 /* StudyGuideSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

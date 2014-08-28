@@ -256,10 +256,10 @@
             </objects>
             <point key="canvasLocation" x="449" y="37"/>
         </scene>
-        <!--View Controller-->
+        <!--Quotes View Controller-->
         <scene sceneID="Jqe-MQ-yPT">
             <objects>
-                <viewController id="z2a-bW-Dl2" sceneMemberID="viewController">
+                <viewController id="z2a-bW-Dl2" customClass="QuotesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RMc-WZ-pOc"/>
                         <viewControllerLayoutGuide type="bottom" id="XLE-y5-u3X"/>
@@ -268,20 +268,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quotes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-Pn-QYx">
-                                <rect key="frame" x="132" y="100" width="56" height="21"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kh-hj-hzU">
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kk1-mR-QtE"/>
+                    <connections>
+                        <outlet property="webView" destination="6kh-hj-hzU" id="066-Ks-SsY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgq-lz-Bgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="833"/>
+            <point key="canvasLocation" x="449" y="839"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">

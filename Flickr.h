@@ -12,6 +12,7 @@
 
 typedef void (^FlickrListCompletionBlock)(NSString *setID, NSArray *results, NSError *error);
 typedef void (^FlickrPhotoCompletionBlock)(UIImage *photoImage, NSError *error);
+typedef void (^FlickrLoadPhotosCompletionBlock)(NSMutableArray *downloadedImages, NSError *error);
 
 @interface Flickr : NSObject
 
@@ -23,5 +24,6 @@ typedef void (^FlickrPhotoCompletionBlock)(UIImage *photoImage, NSError *error);
 - (void)retrievePhotosForSet:(NSString *) photosetID completionBlock: (FlickrListCompletionBlock) completionBlock;
 + (NSString *)flickrListURLForAccount;
 + (NSString *)flickrPhotoURLForFlickrPhoto:(FlickrPhoto *) flickrPhoto size:(NSString *) size;
++ (void)loadImagesForPhotos:(NSMutableArray *)photos completionBlock:(FlickrLoadPhotosCompletionBlock) completionBlock;
 
 @end

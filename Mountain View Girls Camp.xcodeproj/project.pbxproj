@@ -81,6 +81,7 @@
 		2C65934419AFA34200C303B5 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		2C65934619AFA3C100C303B5 /* QuotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuotesViewController.h; path = ../QuotesViewController.h; sourceTree = "<group>"; };
 		2C65934719AFA3C100C303B5 /* QuotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuotesViewController.m; path = ../QuotesViewController.m; sourceTree = "<group>"; };
+		2C65934919B22E3000C303B5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2C6D52B5198BE1D10044705A /* Mountain View Girls Camp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mountain View Girls Camp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6D52B8198BE1D20044705A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C6D52BA198BE1D20044705A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,6 +185,7 @@
 		2C6D52B7198BE1D10044705A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C65934919B22E3000C303B5 /* Social.framework */,
 				2C6D5336199324D40044705A /* MessageUI.framework */,
 				2C6D52B8198BE1D20044705A /* Foundation.framework */,
 				2C6D52BA198BE1D20044705A /* CoreGraphics.framework */,

@@ -144,7 +144,44 @@
 
 }
 
-
++ (void)loadImagesForPhotos:(NSMutableArray *)photos completionBlock:(FlickrLoadPhotosCompletionBlock) completionBlock
+{
+    NSMutableArray *returnPhotos = [@[] mutableCopy];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(queue, ^{
+        
+        for (FlickrPhoto *photo in photos) {
+        
+            NSError *error = nil;
+        
+            NSString *size = @"b";
+        
+            NSString *searchURL = [Flickr flickrPhotoURLForFlickrPhoto:photo size:size];
+            NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:searchURL] options:0 error:&error];
+        
+            if(error)
+            {
+                completionBlock(nil,error);
+            }
+            else
+            {
+                UIImage *image = [UIImage imageWithData:imageData];
+                if([size isEqualToString:@"m"])
+                {
+                    photo.thumbnail = image;
+                }
+                else
+                {
+                    photo.largeImage = image;
+                }
+                [returnPhotos addObject:photo];
+            }
+        }
+        completionBlock(returnPhotos, nil);
+    });
+}
 
 + (void)loadImageForPhoto:(FlickrPhoto *)flickrPhoto thumbnail:(BOOL)thumbnail completionBlock:(FlickrPhotoCompletionBlock) completionBlock
 {

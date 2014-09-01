@@ -71,7 +71,7 @@
         [self.collectionView setAllowsMultipleSelection:NO];
         // 3
         if ([self.selectedPhotos count] > 0) {
-            [self showMailComposerAndSend];
+            [self showShareStuff];
         }
         // 4
         for(NSIndexPath *indexPath in self.collectionView.indexPathsForSelectedItems) {
@@ -178,6 +178,71 @@
         flickrPhotoViewController.flickrPhoto = sender;
     }
 }
+
+-(void)showShareStuff {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSMutableArray *pictures = [@[] mutableCopy];
+    NSMutableArray *photosToShare = [@[] mutableCopy];
+    NSArray *photos = self.searchResults[self.searches[0]];
+    for (FlickrPhoto *flickrPhoto in photos) {
+        for (FlickrPhoto *selectedPhoto in self.selectedPhotos) {
+            if (flickrPhoto.photoID == selectedPhoto.photoID) {
+                [pictures addObject:selectedPhoto];
+            }
+        }
+    }
+    
+    [Flickr loadImagesForPhotos:pictures completionBlock:^(NSMutableArray *downloadedImages, NSError *error) {
+        if (!error)
+        {
+            for (FlickrPhoto *photo in downloadedImages) {
+                [pictures addObject:photo.largeImage];
+            }
+        } else {
+            NSLog(@"This is an error");
+        }
+        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
+        NSArray *activityItems = pictures;
+        UIActivityViewController *activityController = [[UIActivityViewController alloc]  initWithActivityItems:activityItems applicationActivities:nil];
+        activityController.completionHandler = ^(NSString *activityType, BOOL completed) {
+            if (completed) {
+                NSLog(@"Activity complete: %@", activityType);
+                if ([activityType isEqualToString:UIActivityTypeSaveToCameraRoll]) {
+                    //                hasSavedPhoto = YES;
+                    NSLog(@"Your photo has been saved.");
+                }
+                else if ([activityType isEqualToString:UIActivityTypeMail]) {
+                    NSLog(@"Your email has been sent.");
+                }
+                else if ([activityType isEqualToString:UIActivityTypePostToTwitter]) {
+                    NSLog(@"Your tweet has been sent.");
+                }
+                else if ([activityType isEqualToString:UIActivityTypePostToFacebook]) {
+                    NSLog(@"Your photo has been posted.");
+                }
+                else if ([activityType isEqualToString:UIActivityTypeCopyToPasteboard]) {
+                    NSLog(@"Your photo has been copied to the pasteboard.");
+                }
+                else if ([activityType isEqualToString:UIActivityTypeAssignToContact]) {
+                    NSLog(@"Contact Updated");
+                }
+                else if ([activityType isEqualToString:UIActivityTypePrint]) {
+                    NSLog(@"Your photo has been sent to the printer.");
+                }
+                else
+                    NSLog(@"Done");
+            }
+        };
+        if (activityController)
+            [self presentViewController:activityController animated:YES completion:nil];
+        
+    }];
+    
+    
+}
+
 
 -(void)showMailComposerAndSend {
     if ([MFMailComposeViewController canSendMail]) {

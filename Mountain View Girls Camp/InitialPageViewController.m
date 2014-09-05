@@ -10,8 +10,6 @@
 
 @interface InitialPageViewController ()
 
-@property(nonatomic, strong) IBOutlet UIButton *quoteButton;
-
 @end
 
 @implementation InitialPageViewController
@@ -28,10 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _quoteButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    // you probably want to center it
-    _quoteButton.titleLabel.textAlignment = NSTextAlignmentCenter; // if you want to
-    [_quoteButton setTitle: @"Temple Quotes\nFrom the Blind Walk" forState: UIControlStateNormal];
     
 }
 

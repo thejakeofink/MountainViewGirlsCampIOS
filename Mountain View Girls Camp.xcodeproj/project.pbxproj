@@ -400,6 +400,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 				TargetAttributes = {
+					2C6D52B4198BE1D10044705A = {
+						DevelopmentTeam = 8487F93QYP;
+					};
 					2C6D52D5198BE1D20044705A = {
 						TestTargetID = 2C6D52B4198BE1D10044705A;
 					};
@@ -625,6 +628,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mountain View Girls Camp/Mountain View Girls Camp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -642,6 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mountain View Girls Camp/Mountain View Girls Camp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

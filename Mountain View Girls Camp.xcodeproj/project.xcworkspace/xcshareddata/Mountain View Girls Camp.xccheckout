@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8B7A7EC1-161A-4009-B9F6-BFF8C398B421</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Mountain View Girls Camp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2E4DDA7FF1AA1006D43174863CFE5A7E15D5FE91</key>
+		<string>github.com:thejakeofink/MountainViewGirlsCampIOS.git</string>
+		<key>7790828D-C6B2-4E59-BF1D-DB8CABD6EBED</key>
+		<string>ssh://github.com/thejakeofink/MountainViewGirlsCampIOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Mountain View Girls Camp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2E4DDA7FF1AA1006D43174863CFE5A7E15D5FE91</key>
+		<string>../..</string>
+		<key>7790828D-C6B2-4E59-BF1D-DB8CABD6EBED</key>
+		<string>../../../Mountain View Girls Camp</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:thejakeofink/MountainViewGirlsCampIOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2E4DDA7FF1AA1006D43174863CFE5A7E15D5FE91</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7790828D-C6B2-4E59-BF1D-DB8CABD6EBED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Mountain View Girls Camp</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2E4DDA7FF1AA1006D43174863CFE5A7E15D5FE91</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Mountain%20View%20Girls%20Camp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

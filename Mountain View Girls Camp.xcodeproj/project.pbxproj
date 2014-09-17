@@ -10,6 +10,8 @@
 		2C0C773819A9731D0016A1C5 /* InitialPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C773719A9731D0016A1C5 /* InitialPageViewController.m */; };
 		2C0C773B19A97D000016A1C5 /* AlbumSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C773A19A97D000016A1C5 /* AlbumSelectViewController.m */; };
 		2C0C773E19AAA5550016A1C5 /* FlickrAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C773D19AAA5550016A1C5 /* FlickrAlbumCell.m */; };
+		2C38A04B19C93E0D00114C6F /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A04A19C93E0D00114C6F /* CalendarViewController.m */; };
+		2C38A04E19C9448400114C6F /* libPods-MSCollectionViewCalendarLayout.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A04C19C93EB100114C6F /* libPods-MSCollectionViewCalendarLayout.a */; };
 		2C65933E19AED13500C303B5 /* StudyGuideSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65933D19AED13500C303B5 /* StudyGuideSelectViewController.m */; };
 		2C65934119AF870C00C303B5 /* StudyGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65934019AF870C00C303B5 /* StudyGuideViewController.m */; };
 		2C65934519AFA34200C303B5 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 2C65934419AFA34200C303B5 /* www */; };
@@ -91,6 +93,9 @@
 		2C0C773A19A97D000016A1C5 /* AlbumSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumSelectViewController.m; sourceTree = "<group>"; };
 		2C0C773C19AAA5550016A1C5 /* FlickrAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAlbumCell.h; sourceTree = "<group>"; };
 		2C0C773D19AAA5550016A1C5 /* FlickrAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrAlbumCell.m; sourceTree = "<group>"; };
+		2C38A04919C93E0D00114C6F /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		2C38A04A19C93E0D00114C6F /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		2C38A04C19C93EB100114C6F /* libPods-MSCollectionViewCalendarLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MSCollectionViewCalendarLayout.a"; path = "Pods/build/Debug-iphoneos/libPods-MSCollectionViewCalendarLayout.a"; sourceTree = "<group>"; };
 		2C65933C19AED13500C303B5 /* StudyGuideSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyGuideSelectViewController.h; sourceTree = "<group>"; };
 		2C65933D19AED13500C303B5 /* StudyGuideSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyGuideSelectViewController.m; sourceTree = "<group>"; };
 		2C65933F19AF870C00C303B5 /* StudyGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyGuideViewController.h; sourceTree = "<group>"; };
@@ -227,6 +232,8 @@
 				2C6D5324199084FB0044705A /* FlickrPhotoViewController.m */,
 				2C65934619AFA3C100C303B5 /* QuotesViewController.h */,
 				2C65934719AFA3C100C303B5 /* QuotesViewController.m */,
+				2C38A04919C93E0D00114C6F /* CalendarViewController.h */,
+				2C38A04A19C93E0D00114C6F /* CalendarViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -256,6 +263,7 @@
 		2C6D52B7198BE1D10044705A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C38A04C19C93EB100114C6F /* libPods-MSCollectionViewCalendarLayout.a */,
 				2C65934919B22E3000C303B5 /* Social.framework */,
 				2C6D5336199324D40044705A /* MessageUI.framework */,
 				2C6D52B8198BE1D20044705A /* Foundation.framework */,
@@ -547,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C38A04E19C9448400114C6F /* libPods-MSCollectionViewCalendarLayout.a in Sources */,
 				2C0C773E19AAA5550016A1C5 /* FlickrAlbumCell.m in Sources */,
 				2C65934119AF870C00C303B5 /* StudyGuideViewController.m in Sources */,
 				2C6D532219903F060044705A /* FlickrPhotoHeaderView.m in Sources */,
@@ -559,6 +568,7 @@
 				2C6D531A198C641A0044705A /* Flickr.m in Sources */,
 				2C0C773B19A97D000016A1C5 /* AlbumSelectViewController.m in Sources */,
 				2C6D531B198C641A0044705A /* FlickrPhoto.m in Sources */,
+				2C38A04B19C93E0D00114C6F /* CalendarViewController.m in Sources */,
 				2C6D52C5198BE1D20044705A /* main.m in Sources */,
 				2C65933E19AED13500C303B5 /* StudyGuideSelectViewController.m in Sources */,
 				2C65934819AFA3C100C303B5 /* QuotesViewController.m in Sources */,
@@ -695,6 +705,10 @@
 				);
 				INFOPLIST_FILE = "Mountain View Girls Camp/Mountain View Girls Camp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -714,6 +728,10 @@
 				);
 				INFOPLIST_FILE = "Mountain View Girls Camp/Mountain View Girls Camp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

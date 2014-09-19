@@ -12,6 +12,27 @@
 		2C0C773E19AAA5550016A1C5 /* FlickrAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C773D19AAA5550016A1C5 /* FlickrAlbumCell.m */; };
 		2C38A04B19C93E0D00114C6F /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A04A19C93E0D00114C6F /* CalendarViewController.m */; };
 		2C38A04E19C9448400114C6F /* libPods-MSCollectionViewCalendarLayout.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A04C19C93EB100114C6F /* libPods-MSCollectionViewCalendarLayout.a */; };
+		2C38A05919CBD9CC00114C6F /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A04F19CBD9CC00114C6F /* libPods-AFNetworking.a */; };
+		2C38A05A19CBD9CC00114C6F /* libPods-CupertinoYankee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A05019CBD9CC00114C6F /* libPods-CupertinoYankee.a */; };
+		2C38A05B19CBD9CC00114C6F /* libPods-ISO8601DateFormatterValueTransformer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A05119CBD9CC00114C6F /* libPods-ISO8601DateFormatterValueTransformer.a */; };
+		2C38A05C19CBD9CC00114C6F /* libPods-Masonry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A05219CBD9CC00114C6F /* libPods-Masonry.a */; };
+		2C38A05D19CBD9CC00114C6F /* libPods-MSCollectionViewCalendarLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A05319CBD9CC00114C6F /* libPods-MSCollectionViewCalendarLayout.a */; };
+		2C38A05E19CBD9CC00114C6F /* libPods-RestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A05419CBD9CC00114C6F /* libPods-RestKit.a */; };
+		2C38A05F19CBD9CD00114C6F /* libPods-RKValueTransformers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A05519CBD9CC00114C6F /* libPods-RKValueTransformers.a */; };
+		2C38A06019CBD9CD00114C6F /* libPods-SOCKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A05619CBD9CC00114C6F /* libPods-SOCKit.a */; };
+		2C38A06119CBD9CD00114C6F /* libPods-TransitionKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A05719CBD9CC00114C6F /* libPods-TransitionKit.a */; };
+		2C38A06219CBD9CD00114C6F /* libPods-UIColor-HexString.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C38A05819CBD9CC00114C6F /* libPods-UIColor-HexString.a */; };
+		2C38A06319CBDA0400114C6F /* libPods-AFNetworking.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A04F19CBD9CC00114C6F /* libPods-AFNetworking.a */; };
+		2C38A06419CBDA0400114C6F /* libPods-CupertinoYankee.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A05019CBD9CC00114C6F /* libPods-CupertinoYankee.a */; };
+		2C38A06519CBDA0400114C6F /* libPods-ISO8601DateFormatterValueTransformer.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A05119CBD9CC00114C6F /* libPods-ISO8601DateFormatterValueTransformer.a */; };
+		2C38A06619CBDA0400114C6F /* libPods-Masonry.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A05219CBD9CC00114C6F /* libPods-Masonry.a */; };
+		2C38A06719CBDA0400114C6F /* libPods-MSCollectionViewCalendarLayout.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A05319CBD9CC00114C6F /* libPods-MSCollectionViewCalendarLayout.a */; };
+		2C38A06819CBDA0400114C6F /* libPods-RestKit.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A05419CBD9CC00114C6F /* libPods-RestKit.a */; };
+		2C38A06919CBDA0400114C6F /* libPods-RKValueTransformers.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A05519CBD9CC00114C6F /* libPods-RKValueTransformers.a */; };
+		2C38A06A19CBDA0400114C6F /* libPods-SOCKit.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A05619CBD9CC00114C6F /* libPods-SOCKit.a */; };
+		2C38A06B19CBDA0400114C6F /* libPods-TransitionKit.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A05719CBD9CC00114C6F /* libPods-TransitionKit.a */; };
+		2C38A06C19CBDA0400114C6F /* libPods-UIColor-HexString.a in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A05819CBD9CC00114C6F /* libPods-UIColor-HexString.a */; };
+		2C38A06F19CBDC5000114C6F /* CalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C38A06E19CBDC5000114C6F /* CalendarEvent.m */; };
 		2C65933E19AED13500C303B5 /* StudyGuideSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65933D19AED13500C303B5 /* StudyGuideSelectViewController.m */; };
 		2C65934119AF870C00C303B5 /* StudyGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65934019AF870C00C303B5 /* StudyGuideViewController.m */; };
 		2C65934519AFA34200C303B5 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 2C65934419AFA34200C303B5 /* www */; };
@@ -96,6 +117,18 @@
 		2C38A04919C93E0D00114C6F /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		2C38A04A19C93E0D00114C6F /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		2C38A04C19C93EB100114C6F /* libPods-MSCollectionViewCalendarLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MSCollectionViewCalendarLayout.a"; path = "Pods/build/Debug-iphoneos/libPods-MSCollectionViewCalendarLayout.a"; sourceTree = "<group>"; };
+		2C38A04F19CBD9CC00114C6F /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
+		2C38A05019CBD9CC00114C6F /* libPods-CupertinoYankee.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-CupertinoYankee.a"; path = "Pods/build/Debug-iphoneos/libPods-CupertinoYankee.a"; sourceTree = "<group>"; };
+		2C38A05119CBD9CC00114C6F /* libPods-ISO8601DateFormatterValueTransformer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ISO8601DateFormatterValueTransformer.a"; path = "Pods/build/Debug-iphoneos/libPods-ISO8601DateFormatterValueTransformer.a"; sourceTree = "<group>"; };
+		2C38A05219CBD9CC00114C6F /* libPods-Masonry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Masonry.a"; path = "Pods/build/Debug-iphoneos/libPods-Masonry.a"; sourceTree = "<group>"; };
+		2C38A05319CBD9CC00114C6F /* libPods-MSCollectionViewCalendarLayout.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-MSCollectionViewCalendarLayout.a"; path = "Pods/build/Debug-iphoneos/libPods-MSCollectionViewCalendarLayout.a"; sourceTree = "<group>"; };
+		2C38A05419CBD9CC00114C6F /* libPods-RestKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-RestKit.a"; path = "Pods/build/Debug-iphoneos/libPods-RestKit.a"; sourceTree = "<group>"; };
+		2C38A05519CBD9CC00114C6F /* libPods-RKValueTransformers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-RKValueTransformers.a"; path = "Pods/build/Debug-iphoneos/libPods-RKValueTransformers.a"; sourceTree = "<group>"; };
+		2C38A05619CBD9CC00114C6F /* libPods-SOCKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-SOCKit.a"; path = "Pods/build/Debug-iphoneos/libPods-SOCKit.a"; sourceTree = "<group>"; };
+		2C38A05719CBD9CC00114C6F /* libPods-TransitionKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-TransitionKit.a"; path = "Pods/build/Debug-iphoneos/libPods-TransitionKit.a"; sourceTree = "<group>"; };
+		2C38A05819CBD9CC00114C6F /* libPods-UIColor-HexString.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-UIColor-HexString.a"; path = "Pods/build/Debug-iphoneos/libPods-UIColor-HexString.a"; sourceTree = "<group>"; };
+		2C38A06D19CBDC5000114C6F /* CalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEvent.h; sourceTree = "<group>"; };
+		2C38A06E19CBDC5000114C6F /* CalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarEvent.m; sourceTree = "<group>"; };
 		2C65933C19AED13500C303B5 /* StudyGuideSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyGuideSelectViewController.h; sourceTree = "<group>"; };
 		2C65933D19AED13500C303B5 /* StudyGuideSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyGuideSelectViewController.m; sourceTree = "<group>"; };
 		2C65933F19AF870C00C303B5 /* StudyGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyGuideViewController.h; sourceTree = "<group>"; };
@@ -181,11 +214,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C38A05919CBD9CC00114C6F /* libPods-AFNetworking.a in Frameworks */,
+				2C38A05A19CBD9CC00114C6F /* libPods-CupertinoYankee.a in Frameworks */,
+				2C38A05B19CBD9CC00114C6F /* libPods-ISO8601DateFormatterValueTransformer.a in Frameworks */,
+				2C38A05C19CBD9CC00114C6F /* libPods-Masonry.a in Frameworks */,
+				2C38A05D19CBD9CC00114C6F /* libPods-MSCollectionViewCalendarLayout.a in Frameworks */,
+				2C38A05E19CBD9CC00114C6F /* libPods-RestKit.a in Frameworks */,
+				2C38A05F19CBD9CD00114C6F /* libPods-RKValueTransformers.a in Frameworks */,
+				2C38A06019CBD9CD00114C6F /* libPods-SOCKit.a in Frameworks */,
+				2C38A06119CBD9CD00114C6F /* libPods-TransitionKit.a in Frameworks */,
+				2C38A06219CBD9CD00114C6F /* libPods-UIColor-HexString.a in Frameworks */,
+				C4094C5451864EF88CDD351C /* libPods.a in Frameworks */,
 				2C6D5337199324D40044705A /* MessageUI.framework in Frameworks */,
 				2C6D52BB198BE1D20044705A /* CoreGraphics.framework in Frameworks */,
 				2C6D52BD198BE1D20044705A /* UIKit.framework in Frameworks */,
 				2C6D52B9198BE1D20044705A /* Foundation.framework in Frameworks */,
-				C4094C5451864EF88CDD351C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +254,8 @@
 				2C0C773D19AAA5550016A1C5 /* FlickrAlbumCell.m */,
 				2C6D531D198FC6050044705A /* FlickrPhotoCell.h */,
 				2C6D531E198FC6050044705A /* FlickrPhotoCell.m */,
+				2C38A06D19CBDC5000114C6F /* CalendarEvent.h */,
+				2C38A06E19CBDC5000114C6F /* CalendarEvent.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -263,6 +308,16 @@
 		2C6D52B7198BE1D10044705A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C38A04F19CBD9CC00114C6F /* libPods-AFNetworking.a */,
+				2C38A05019CBD9CC00114C6F /* libPods-CupertinoYankee.a */,
+				2C38A05119CBD9CC00114C6F /* libPods-ISO8601DateFormatterValueTransformer.a */,
+				2C38A05219CBD9CC00114C6F /* libPods-Masonry.a */,
+				2C38A05319CBD9CC00114C6F /* libPods-MSCollectionViewCalendarLayout.a */,
+				2C38A05419CBD9CC00114C6F /* libPods-RestKit.a */,
+				2C38A05519CBD9CC00114C6F /* libPods-RKValueTransformers.a */,
+				2C38A05619CBD9CC00114C6F /* libPods-SOCKit.a */,
+				2C38A05719CBD9CC00114C6F /* libPods-TransitionKit.a */,
+				2C38A05819CBD9CC00114C6F /* libPods-UIColor-HexString.a */,
 				2C38A04C19C93EB100114C6F /* libPods-MSCollectionViewCalendarLayout.a */,
 				2C65934919B22E3000C303B5 /* Social.framework */,
 				2C6D5336199324D40044705A /* MessageUI.framework */,
@@ -555,6 +610,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C38A06319CBDA0400114C6F /* libPods-AFNetworking.a in Sources */,
+				2C38A06419CBDA0400114C6F /* libPods-CupertinoYankee.a in Sources */,
+				2C38A06519CBDA0400114C6F /* libPods-ISO8601DateFormatterValueTransformer.a in Sources */,
+				2C38A06619CBDA0400114C6F /* libPods-Masonry.a in Sources */,
+				2C38A06719CBDA0400114C6F /* libPods-MSCollectionViewCalendarLayout.a in Sources */,
+				2C38A06819CBDA0400114C6F /* libPods-RestKit.a in Sources */,
+				2C38A06919CBDA0400114C6F /* libPods-RKValueTransformers.a in Sources */,
+				2C38A06A19CBDA0400114C6F /* libPods-SOCKit.a in Sources */,
+				2C38A06B19CBDA0400114C6F /* libPods-TransitionKit.a in Sources */,
+				2C38A06C19CBDA0400114C6F /* libPods-UIColor-HexString.a in Sources */,
 				2C38A04E19C9448400114C6F /* libPods-MSCollectionViewCalendarLayout.a in Sources */,
 				2C0C773E19AAA5550016A1C5 /* FlickrAlbumCell.m in Sources */,
 				2C65934119AF870C00C303B5 /* StudyGuideViewController.m in Sources */,
@@ -567,6 +632,7 @@
 				2C6D52C9198BE1D20044705A /* AppDelegate.m in Sources */,
 				2C6D531A198C641A0044705A /* Flickr.m in Sources */,
 				2C0C773B19A97D000016A1C5 /* AlbumSelectViewController.m in Sources */,
+				2C38A06F19CBDC5000114C6F /* CalendarEvent.m in Sources */,
 				2C6D531B198C641A0044705A /* FlickrPhoto.m in Sources */,
 				2C38A04B19C93E0D00114C6F /* CalendarViewController.m in Sources */,
 				2C6D52C5198BE1D20044705A /* main.m in Sources */,

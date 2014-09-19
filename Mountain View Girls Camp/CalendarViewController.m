@@ -9,9 +9,11 @@
 #import "CalendarViewController.h"
 #import "MSCollectionViewCalendarLayout.h"
 
+
 @interface CalendarViewController () <MSCollectionViewDelegateCalendarLayout>
 
 @property (nonatomic, strong) MSCollectionViewCalendarLayout *collectionViewCalendarLayout;
+@property (nonatomic) NSArray *arrayOfDays;
 
 @end
 
@@ -22,6 +24,8 @@
     self.collectionViewCalendarLayout = [[MSCollectionViewCalendarLayout alloc] init];
     self.collectionViewCalendarLayout.delegate = self;
     self = [super initWithCollectionViewLayout:self.collectionViewCalendarLayout];
+    
+    self.arrayOfDays = [@[] mutableCopy];
     return self;
 }
 
@@ -38,6 +42,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.arrayOfDays arrayByAddingObject:]
     
 }
 
@@ -73,12 +79,12 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return self.fetchedResultsController.sections.count;
+    return self.arrayOfDays.count;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [(id <NSFetchedResultsSectionInfo>)self.fetchedResultsController.sections[section] numberOfObjects];
+    return [[_arrayOfDays objectAtIndex:section] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

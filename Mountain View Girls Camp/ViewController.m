@@ -46,6 +46,9 @@
     self.searchResults = [@{} mutableCopy];
     self.flickr = [[Flickr alloc] init];
     
+    self.takeController = [[FDTakeController alloc] init];
+    self.takeController.delegate = self;
+    
     self.selectedPhotos = [@[] mutableCopy];
     
     [self loadPhotosForPhotoSet: _photosetID];
@@ -86,9 +89,7 @@
 
 -(IBAction)addButtonTapped:(id)sender
 {
-    FDTakeController *photopicker = [[FDTakeController alloc] init];
-    [photopicker takePhotoOrChooseFromLibrary];
-    photopicker.delegate = self;
+    [self.takeController takePhotoOrChooseFromLibrary];
 }
 
 -(void)loadPhotosForPhotoSet: (NSString *)albumID {
@@ -204,7 +205,7 @@
 
 -(void)takeController:(FDTakeController *)controller gotPhoto:(UIImage *)photo withInfo:(NSDictionary *)info
 {
-    
+    NSLog(@"We got a photo!");
 }
 
 -(void)showShareStuff {

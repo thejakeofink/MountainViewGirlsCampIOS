@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_CupertinoYankee 1
 #define COCOAPODS_VERSION_PATCH_CupertinoYankee 1
 
+// FDTake
+#define COCOAPODS_POD_AVAILABLE_FDTake
+#define COCOAPODS_VERSION_MAJOR_FDTake 0
+#define COCOAPODS_VERSION_MINOR_FDTake 2
+#define COCOAPODS_VERSION_PATCH_FDTake 2
+
 // ISO8601DateFormatterValueTransformer
 #define COCOAPODS_POD_AVAILABLE_ISO8601DateFormatterValueTransformer
 #define COCOAPODS_VERSION_MAJOR_ISO8601DateFormatterValueTransformer 0

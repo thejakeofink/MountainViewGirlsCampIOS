@@ -8,6 +8,7 @@
 
 #import "CalendarViewController.h"
 #import "MSCollectionViewCalendarLayout.h"
+#import "CalendarEventViewCell.h"
 
 
 @interface CalendarViewController () <MSCollectionViewDelegateCalendarLayout>
@@ -43,7 +44,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.arrayOfDays arrayByAddingObject:]
     
 }
 
@@ -89,8 +89,8 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MSEventCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MSEventCellReuseIdentifier forIndexPath:indexPath];
-    cell.event = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    CalendarEventViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CalendarEventCell" forIndexPath:indexPath];
+//    cell.event = [self.arrayOfDays objectAtIndex:indexPath];
     return cell;
 }
 

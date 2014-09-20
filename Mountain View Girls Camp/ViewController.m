@@ -16,8 +16,9 @@
 #import <MessageUI/MessageUI.h>
 
 @interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate>
-@property(nonatomic, weak) IBOutlet UIToolbar *toolbar;
+@property(nonatomic, strong) IBOutlet UIToolbar *toolbar;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem *shareButton;
+@property(nonatomic, strong) IBOutlet UIBarButtonItem *addButton;
 
 @property(nonatomic, strong) NSMutableDictionary *searchResults;
 @property(nonatomic, strong) NSMutableArray *searches;
@@ -37,6 +38,10 @@
 {
     [super viewDidLoad];
 	
+    NSMutableArray *toolbarButtons = [self.toolbar.items mutableCopy];
+    [toolbarButtons removeObject:self.addButton];
+    [self.toolbar setItems:toolbarButtons animated:YES];
+    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_cork.png"]];
     
     self.searches = [@[] mutableCopy];
@@ -81,6 +86,11 @@
     }
 }
 
+-(IBAction)addButtonTapped:(id)sender
+{
+    
+}
+
 -(void)loadPhotosForPhotoSet: (NSString *)albumID {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     // 1
@@ -100,6 +110,14 @@
             NSLog(@"What is our error? %@", error.userInfo);
             NSLog(@"Error searching Flickr: %@", error.localizedDescription);
             [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }
+        
+        NSMutableArray *toolbarButtons = [self.toolbar.items mutableCopy];
+        
+        if (![toolbarButtons containsObject:self.addButton] && [self.searches[0] isEqualToString:@"Uploads"])
+        {
+            [toolbarButtons addObject:self.addButton];
+            [self.toolbar setItems:toolbarButtons animated:YES];
         }
     }];
 }

@@ -10,6 +10,7 @@
 #import "MSCollectionViewCalendarLayout.h"
 #import "CalendarEventViewCell.h"
 #import "CalendarDayColumnHeader.h"
+#import "CalendarTimeRowHeader.h"
 #import "NSDate+CupertinoYankee.h"
 
 
@@ -107,7 +108,7 @@
         dayColumnHeader.currentDay = [[day beginningOfDay] isEqualToDate:[currentDay beginningOfDay]];
         view = dayColumnHeader;
     } else if (kind == MSCollectionElementKindTimeRowHeader) {
-        MSTimeRowHeader *timeRowHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:MSTimeRowHeaderReuseIdentifier forIndexPath:indexPath];
+        CalendarTimeRowHeader *timeRowHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"CalendarTimeRowHeader" forIndexPath:indexPath];
         timeRowHeader.time = [self.collectionViewCalendarLayout dateForTimeRowHeaderAtIndexPath:indexPath];
         view = timeRowHeader;
     }

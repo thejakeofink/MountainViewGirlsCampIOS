@@ -9,6 +9,7 @@
 #import "CalendarViewController.h"
 #import "MSCollectionViewCalendarLayout.h"
 #import "CalendarEventViewCell.h"
+#import "CalendarEvent.h"
 #import "CalendarDayColumnHeader.h"
 #import "CalendarTimeRowHeader.h"
 #import "NSDate+CupertinoYankee.h"
@@ -29,7 +30,14 @@
     self.collectionViewCalendarLayout.delegate = self;
     self = [super initWithCollectionViewLayout:self.collectionViewCalendarLayout];
     
+    CalendarEvent *event = [[CalendarEvent alloc] init];
+    
+    event.name = @"Mutual";
+    event.date = [NSDate new];
+    event.description = @"Come to mutual for a fun time!";
+    
     self.arrayOfDays = [@[] mutableCopy];
+    [self.arrayOfDays arrayByAddingObject:event];
     return self;
 }
 
@@ -93,7 +101,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CalendarEventViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CalendarEventCell" forIndexPath:indexPath];
-//    cell.event = [self.arrayOfDays objectAtIndex:indexPath];
+    cell.event = [self.arrayOfDays objectAtIndex:indexPath.row];
     return cell;
 }
 

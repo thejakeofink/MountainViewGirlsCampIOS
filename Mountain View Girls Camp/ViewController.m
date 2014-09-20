@@ -13,12 +13,13 @@
 #import "FlickrPhotoHeaderView.h"
 #import "FlickrPhotoViewController.h"
 #import "MBProgressHUD.h"
+#import "FDTakeController.h"
 #import <MessageUI/MessageUI.h>
 
-@interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate>
-@property(nonatomic, strong) IBOutlet UIToolbar *toolbar;
+@interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate, FDTakeDelegate>
+@property(nonatomic, weak) IBOutlet UIToolbar *toolbar;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem *shareButton;
-@property(nonatomic, strong) IBOutlet UIBarButtonItem *addButton;
+@property(nonatomic, weak) IBOutlet UIBarButtonItem *addButton;
 
 @property(nonatomic, strong) NSMutableDictionary *searchResults;
 @property(nonatomic, strong) NSMutableArray *searches;
@@ -30,6 +31,7 @@
 @property(nonatomic, strong) NSMutableArray *selectedPhotos;
 
 - (IBAction)shareButtonTapped:(id)sender;
+- (IBAction)addButtonTapped:(id)sender;
 @end
 
 @implementation ViewController
@@ -37,10 +39,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    NSMutableArray *toolbarButtons = [self.toolbar.items mutableCopy];
-    [toolbarButtons removeObject:self.addButton];
-    [self.toolbar setItems:toolbarButtons animated:YES];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_cork.png"]];
     
@@ -88,7 +86,9 @@
 
 -(IBAction)addButtonTapped:(id)sender
 {
-    
+    FDTakeController *photopicker = [[FDTakeController alloc] init];
+    [photopicker takePhotoOrChooseFromLibrary];
+    photopicker.delegate = self;
 }
 
 -(void)loadPhotosForPhotoSet: (NSString *)albumID {
@@ -114,10 +114,15 @@
         
         NSMutableArray *toolbarButtons = [self.toolbar.items mutableCopy];
         
-        if (![toolbarButtons containsObject:self.addButton] && [self.searches[0] isEqualToString:@"Uploads"])
+        if (![self.searches[0] isEqualToString:@"Uploads"])
         {
-            [toolbarButtons addObject:self.addButton];
+//            [toolbarButtons addObject:self.addButton];
+//            [self.toolbar setItems:toolbarButtons animated:YES];
+            [self.addButton setTitle:@""];
+            NSMutableArray *toolbarButtons = [self.toolbar.items mutableCopy];
+            [toolbarButtons removeObject:self.addButton];
             [self.toolbar setItems:toolbarButtons animated:YES];
+            [self.toolbar layoutIfNeeded];
         }
     }];
 }
@@ -195,6 +200,11 @@
         FlickrPhotoViewController *flickrPhotoViewController = segue.destinationViewController;
         flickrPhotoViewController.flickrPhoto = sender;
     }
+}
+
+-(void)takeController:(FDTakeController *)controller gotPhoto:(UIImage *)photo withInfo:(NSDictionary *)info
+{
+    
 }
 
 -(void)showShareStuff {

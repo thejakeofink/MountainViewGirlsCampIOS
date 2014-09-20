@@ -9,6 +9,7 @@
 #import "CalendarEventViewCell.h"
 #import "CalendarEvent.h"
 #import "MASConstraintMaker.h"
+#import "UIColor+HexString.h"
 
 @interface CalendarEventViewCell()
 
@@ -97,13 +98,13 @@
     [self updateColors];
 }
 
-#pragma mark - MSEventCell
+#pragma mark - CalendarEventCell
 
 - (void)setEvent:(CalendarEvent *)event
 {
     _event = event;
-    self.title.attributedText = [[NSAttributedString alloc] initWithString:event.title attributes:[self titleAttributesHighlighted:self.selected]];
-    self.location.attributedText = [[NSAttributedString alloc] initWithString:event.location attributes:[self subtitleAttributesHighlighted:self.selected]];;
+    self.title.attributedText = [[NSAttributedString alloc] initWithString:event.name attributes:[self titleAttributesHighlighted:self.selected]];
+    self.location.attributedText = [[NSAttributedString alloc] initWithString:event.description attributes:[self subtitleAttributesHighlighted:self.selected]];;
 }
 
 - (void)updateColors

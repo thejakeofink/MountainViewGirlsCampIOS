@@ -10,4 +10,11 @@
 
 @implementation CalendarEvent
 
+
+
+@dynamic date;
+@dynamic time;
+@dynamic name;
+@dynamic description;
+
 @end

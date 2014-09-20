@@ -9,6 +9,8 @@
 #import "CalendarViewController.h"
 #import "MSCollectionViewCalendarLayout.h"
 #import "CalendarEventViewCell.h"
+#import "CalendarDayColumnHeader.h"
+#import "NSDate+CupertinoYankee.h"
 
 
 @interface CalendarViewController () <MSCollectionViewDelegateCalendarLayout>
@@ -98,7 +100,7 @@
 {
     UICollectionReusableView *view;
     if (kind == MSCollectionElementKindDayColumnHeader) {
-        MSDayColumnHeader *dayColumnHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:MSDayColumnHeaderReuseIdentifier forIndexPath:indexPath];
+        CalendarDayColumnHeader *dayColumnHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"CalendarDayColumnHeader" forIndexPath:indexPath];
         NSDate *day = [self.collectionViewCalendarLayout dateForDayColumnHeaderAtIndexPath:indexPath];
         NSDate *currentDay = [self currentTimeComponentsForCollectionView:self.collectionView layout:self.collectionViewCalendarLayout];
         dayColumnHeader.day = day;

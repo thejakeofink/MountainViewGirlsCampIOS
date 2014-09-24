@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Jake Stokes. All rights reserved.
 //
 
-#import "ViewController.h"
-
-@interface TriviaViewController : ViewController
+@interface TriviaViewController : UIViewController
 
 @end

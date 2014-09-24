@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ums-bp-mW6">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -55,17 +56,17 @@
                                     <segue destination="z2a-bW-Dl2" kind="push" id="J7I-ng-fUw"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="M0e-PJ-vp1">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="M0e-PJ-vp1">
                                 <rect key="frame" x="70" y="380" width="180" height="60"/>
                                 <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="tintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Calendar">
+                                <state key="normal" title="Temple Trivia Quiz">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NsF-Hn-iDD" kind="push" id="E8t-QZ-OCt"/>
+                                    <segue destination="0zE-bs-frf" kind="modal" id="wSF-h9-rex"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -312,6 +313,24 @@
             </objects>
             <point key="canvasLocation" x="449" y="839"/>
         </scene>
+        <!--Trivia View Controller-->
+        <scene sceneID="iLj-2b-p3D">
+            <objects>
+                <viewController id="0zE-bs-frf" customClass="TriviaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WGQ-Y9-PAH"/>
+                        <viewControllerLayoutGuide type="bottom" id="gI2-e0-KEa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ATI-3w-MgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LoW-JE-pra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149" y="1440"/>
+        </scene>
         <!--Calendar View Controller-->
         <scene sceneID="oHD-xX-7II">
             <objects>
@@ -350,7 +369,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FK1-d8-urv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437" y="1577"/>
+            <point key="canvasLocation" x="-867" y="1033"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -370,11 +389,6 @@
                                     <barButtonItem title="Share" id="zJU-YF-wVR">
                                         <connections>
                                             <action selector="shareButtonTapped:" destination="vXZ-lx-hvc" id="1n8-ar-Y0m"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Add" id="Ftp-xs-fCZ">
-                                        <connections>
-                                            <action selector="addButtonTapped:" destination="vXZ-lx-hvc" id="yZo-Si-WaC"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -450,7 +464,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="BF8-tc-yXn"/>
                     <connections>
-                        <outlet property="addButton" destination="Ftp-xs-fCZ" id="N6Z-ld-bI2"/>
                         <outlet property="collectionView" destination="SUT-hH-YdV" id="nTE-vW-kbJ"/>
                         <outlet property="shareButton" destination="zJU-YF-wVR" id="LhK-m4-vP3"/>
                         <outlet property="toolbar" destination="Cps-KT-jAL" id="bRK-rV-naD"/>

@@ -77,7 +77,6 @@
 		2CEC938419BA303600B33A7E /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CEC937419BA303600B33A7E /* iTunesArtwork@2x.png */; };
 		2CF50EDE19CDE7EA00A95A95 /* CalendarTimeRowHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF50EDD19CDE7EA00A95A95 /* CalendarTimeRowHeader.m */; };
 		2CF50EE719D116B100A95A95 /* TriviaQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF50EE619D116B100A95A95 /* TriviaQuestion.m */; };
-		2CF50EEA19D116D100A95A95 /* TriviaAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF50EE919D116D100A95A95 /* TriviaAnswer.m */; };
 		2CF50EEC19D11B6E00A95A95 /* trivia.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2CF50EEB19D11B6E00A95A95 /* trivia.txt */; };
 		2CF50EEF19D11F1800A95A95 /* TriviaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF50EEE19D11F1800A95A95 /* TriviaViewController.m */; };
 		C4094C5451864EF88CDD351C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E631DF62523A414C8D2DA0E7 /* libPods.a */; };
@@ -197,8 +196,6 @@
 		2CF50EDD19CDE7EA00A95A95 /* CalendarTimeRowHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarTimeRowHeader.m; sourceTree = "<group>"; };
 		2CF50EE519D116B100A95A95 /* TriviaQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriviaQuestion.h; sourceTree = "<group>"; };
 		2CF50EE619D116B100A95A95 /* TriviaQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriviaQuestion.m; sourceTree = "<group>"; };
-		2CF50EE819D116D100A95A95 /* TriviaAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriviaAnswer.h; sourceTree = "<group>"; };
-		2CF50EE919D116D100A95A95 /* TriviaAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriviaAnswer.m; sourceTree = "<group>"; };
 		2CF50EEB19D11B6E00A95A95 /* trivia.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trivia.txt; sourceTree = "<group>"; };
 		2CF50EED19D11F1800A95A95 /* TriviaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriviaViewController.h; sourceTree = "<group>"; };
 		2CF50EEE19D11F1800A95A95 /* TriviaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriviaViewController.m; sourceTree = "<group>"; };
@@ -251,8 +248,6 @@
 				2CF50EDD19CDE7EA00A95A95 /* CalendarTimeRowHeader.m */,
 				2CF50EE519D116B100A95A95 /* TriviaQuestion.h */,
 				2CF50EE619D116B100A95A95 /* TriviaQuestion.m */,
-				2CF50EE819D116D100A95A95 /* TriviaAnswer.h */,
-				2CF50EE919D116D100A95A95 /* TriviaAnswer.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -607,7 +602,6 @@
 				2CF50EE719D116B100A95A95 /* TriviaQuestion.m in Sources */,
 				2C65934119AF870C00C303B5 /* StudyGuideViewController.m in Sources */,
 				2C6D532219903F060044705A /* FlickrPhotoHeaderView.m in Sources */,
-				2CF50EEA19D116D100A95A95 /* TriviaAnswer.m in Sources */,
 				2C6D52CF198BE1D20044705A /* ViewController.m in Sources */,
 				2C6D5325199084FB0044705A /* FlickrPhotoViewController.m in Sources */,
 				2C6D531F198FC6050044705A /* FlickrPhotoCell.m in Sources */,

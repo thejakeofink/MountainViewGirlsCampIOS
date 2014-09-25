@@ -11,7 +11,7 @@
 @interface TriviaQuestion : NSObject
 
 @property(nonatomic, strong) NSString *question;
-@property(nonatomic) NSInteger *questionID;
-@property(nonatomic, strong) NSArray *answers;
+@property(nonatomic) NSString *correctAnswer;
+@property(nonatomic, strong) NSMutableArray *answers;
 
 @end

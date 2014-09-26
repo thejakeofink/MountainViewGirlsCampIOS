@@ -107,8 +107,8 @@
 
 - (void) answerSelected:(id)sender
 {
-    if ([self.currentQuestion.correctAnswer isEqualToString:[sender currentTitle]]) {
-        NSLog(@"You Win a Beer!");
+    if ([self.currentQuestion.correctAnswer isEqualToString:[sender currentTitle]])
+    {
         [self increaseScore];
         [self loadNextQuestion];
     }
@@ -119,7 +119,6 @@
     }
     else
     {
-        NSLog(@"wrong answer");
         [self loadNextQuestion];
     }
 }

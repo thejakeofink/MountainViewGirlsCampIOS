@@ -265,7 +265,10 @@
             }
         };
         if (activityController)
+        {
             [self presentViewController:activityController animated:YES completion:nil];
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        }
         
     }];
     

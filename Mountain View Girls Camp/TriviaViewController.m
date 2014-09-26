@@ -114,13 +114,52 @@
     }
     else if ([@"Share" isEqualToString:[sender currentTitle]])
     {
-        
+        NSString *textToShare = [NSString stringWithFormat:@"I just played the Mountain View Girls Camp Temple Trivia game and my score was %d!!!", self.score];
+        [self shareScore:textToShare];
     }
     else
     {
         NSLog(@"wrong answer");
         [self loadNextQuestion];
     }
+}
+
+- (void) shareScore: (NSString *) textToShare
+{
+    NSArray *shareStuff = [[NSArray alloc] init];
+    shareStuff = [shareStuff arrayByAddingObject:textToShare];
+    UIActivityViewController *activityController = [[UIActivityViewController alloc]  initWithActivityItems:shareStuff applicationActivities:nil];
+    activityController.completionHandler = ^(NSString *activityType, BOOL completed) {
+        if (completed) {
+            NSLog(@"Activity complete: %@", activityType);
+            if ([activityType isEqualToString:UIActivityTypeSaveToCameraRoll]) {
+                //                hasSavedPhoto = YES;
+                NSLog(@"Your score has been saved.");
+            }
+            else if ([activityType isEqualToString:UIActivityTypeMail]) {
+                NSLog(@"Your score has been sent.");
+            }
+            else if ([activityType isEqualToString:UIActivityTypePostToTwitter]) {
+                NSLog(@"Your score has been tweeted.");
+            }
+            else if ([activityType isEqualToString:UIActivityTypePostToFacebook]) {
+                NSLog(@"Your score has been posted.");
+            }
+            else if ([activityType isEqualToString:UIActivityTypeCopyToPasteboard]) {
+                NSLog(@"Your score has been copied to the pasteboard.");
+            }
+            else if ([activityType isEqualToString:UIActivityTypeAssignToContact]) {
+                NSLog(@"Contact Updated");
+            }
+            else if ([activityType isEqualToString:UIActivityTypePrint]) {
+                NSLog(@"Your score has been sent to the printer.");
+            }
+            else
+                NSLog(@"Done");
+        }
+    };
+    if (activityController)
+        [self presentViewController:activityController animated:YES completion:nil];
 }
 
 - (void) loadNextQuestion

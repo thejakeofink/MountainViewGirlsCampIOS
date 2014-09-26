@@ -19,7 +19,6 @@
 @interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate, FDTakeDelegate>
 @property(nonatomic, weak) IBOutlet UIToolbar *toolbar;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem *shareButton;
-@property(nonatomic, weak) IBOutlet UIBarButtonItem *addButton;
 
 @property(nonatomic, strong) NSMutableDictionary *searchResults;
 @property(nonatomic, strong) NSMutableArray *searches;
@@ -111,19 +110,6 @@
             NSLog(@"What is our error? %@", error.userInfo);
             NSLog(@"Error searching Flickr: %@", error.localizedDescription);
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-        }
-        
-        NSMutableArray *toolbarButtons = [self.toolbar.items mutableCopy];
-        
-        if (![self.searches[0] isEqualToString:@"Uploads"])
-        {
-//            [toolbarButtons addObject:self.addButton];
-//            [self.toolbar setItems:toolbarButtons animated:YES];
-            [self.addButton setTitle:@""];
-            NSMutableArray *toolbarButtons = [self.toolbar.items mutableCopy];
-            [toolbarButtons removeObject:self.addButton];
-            [self.toolbar setItems:toolbarButtons animated:YES];
-            [self.toolbar layoutIfNeeded];
         }
     }];
 }
